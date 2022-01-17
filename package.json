@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "name": "npm.install",
+  "description": "백준 문제풀이 코드 집합소",
+  "version": "1.0.0",
+  "main": "1330.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjh1011409/BAEKJOON_practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjh1011409/BAEKJOON_practice/issues"
+  },
+  "homepage": "https://github.com/pjh1011409/BAEKJOON_practice#readme"
+}
