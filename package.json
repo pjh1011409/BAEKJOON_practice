@@ -6,7 +6,6 @@
   "description": "백준 문제풀이 코드 집합소",
   "version": "1.0.0",
   "main": "1330.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
