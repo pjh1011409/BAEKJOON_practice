@@ -1,27 +1,19 @@
-const fs = require('fs')                  // '/dev/stdin'
-const input = require("fs").readFileSync('예제.txt').toString().split('');
+let fs = require('fs');                       // '/dev/stdin'
+let input = Number(require('fs').readFileSync('예제.txt').toString());
 
-let firstNum = Number(input[0]);
-let seconNum = Number(input[1]);
-let thirdNum = Number(firstNum + seconNum);
-let result = '';
-let i=0;
+let num = Number(input);
+let sum;
+let i = 0;
 
-while(true){
- 
-
-
-    result = (seconNum.toString() + Math.floor((thirdNum%10)).toString());
-     
-    if(result[0] === input[0]){
-        break;
-    }
-    
-        input[0] = result[0];
-        input[1] = result[1];
-        console.log(result);
-        console.log(input[0],input[1]);
-    
+while (true) {
     i++;
+
+    sum = Math.floor(num / 10) + num % 10;
+    num = (num % 10) * 10 + sum % 10; 
+
+    if (input === num) {
+	break;
+    } 
 }
-   console.log(i);
+
+console.log(i);
