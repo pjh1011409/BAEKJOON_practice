@@ -6,12 +6,18 @@ let B = Number(input[1]);
 let C = Number(input[2]);
 let result = A * B * C;
 let resultarr = result.toString();
-let count = 0;
-console.log(resultarr);
-for(let i=0; i <= 9; i++) {
-    if(Number(resultarr[i]) === i)  {
-      count++;
-    }
-    console.log(count);
+
+for(let i=0; i <=9 ; i++){
+    let count = 0;
+
+    for(let j=0; j<=resultarr.length; j++){
+      if(Number(resultarr[j]) === i){
+        count++;
+      
+      }
+   
   }
+  console.log(count);
+}
+
   
