@@ -1,13 +1,31 @@
-let num = 10;
-
-let arr = new Array();
-let a ='';
-for(let i=0; i<num; i++){
-    arr[i] = i;
-}
-for(let j=0; j<arr.length; j++){
+function NotSelfnumber(N){
     
-    a = arr[j].split('');
-   
+    let sum = N
+
+    while(true){   
+        if(N == 0) break;
+        sum += N%10
+        N = parseInt(N/10)
+    }
+    return sum; 
 }
-console.log(a[1]);
+
+function selfnumber(N){
+    let selfnum = []
+    let result = []
+
+    for(let i=1; i <= N; i++){
+        let index = NotSelfnumber(i); 
+        
+        if(index <= N){
+            selfnum[index] = true;
+        }
+    }
+
+    for(let i=1; i<= N; i++){
+        if(!selfnum[i]) result.push(i);
+    }
+    console.log(result.join('\n'));
+}
+
+selfnumber(10000);
