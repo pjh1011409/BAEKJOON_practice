@@ -5,7 +5,7 @@ let testNum = Number(input[0]);
 let testCase = '';
 
 
-for(let i=1; i<=testNum; i++){ //
+for(let i=1; i<=testNum; i++){ // 주어진 테스트케이스만큼 반복
 
     let result = '';
     testCase = input[i].split(' '); // 각자 테스트케이스마다의 배열
