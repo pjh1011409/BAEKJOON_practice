@@ -1,1 +1,5 @@
-839 237
+4
+aba
+abab
+abcabc
+a
