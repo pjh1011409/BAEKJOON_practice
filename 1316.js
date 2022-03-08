@@ -1,20 +1,28 @@
 const fs = require('fs');     // '/dev/stdin'
 const input = fs.readFileSync('예제.txt').toString().trim().split('\n');
 
-let testCount = Number(input[0]);
-console.log(testCount);
+const caseCount = Number(input[0]);
+let countGroupWord = 0;
 
+for (let i = 1; i <= caseCount; i++) {
+  const word = input[i];
+  const letter = [];
+  let isGroupWord = true;
 
-     //중복된 값만 불러오기 [2, 4, 1] 
-     var overlapArr = input[1].filter(function(item, index){ 
-         return arr.indexOf(item) !== index;
-         });
+  for (let j = 0; j < word.length; j++) {
+    if (letter.indexOf(word[j]) === -1) {
+      letter.push(word[j]);
+    } else {
+      if (letter.indexOf(word[j]) !== letter.length - 1) {
+        isGroupWord = false;
+        break;
+      }
+    }
+  }
 
-console.log(overlapArr);
+  if (isGroupWord) {
+    countGroupWord += 1;
+  }
+}
 
-
-
-// //중복 제거 [1, 2, 3, 4, 5] 
-// var removeOverLapArr = arr.filter(function(item, index){ 
-//     return arr.indexOf(item) === index; });
-
+console.log(countGroupWord);
